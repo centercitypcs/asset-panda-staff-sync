@@ -54,7 +54,8 @@ the `Justfile`.
 Run `just` at the command prompt in the project directory to see options:
 
 ```console
-$ just Available recipes:
+$ just
+Available recipes:
      export_ps_staff               # export staff data from PowerSchool to CSV
      gen-asset-panda-staff-updates # generate a CSV of staff updates to import
                                    # into AssetPanda
