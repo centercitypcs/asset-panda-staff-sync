@@ -35,8 +35,8 @@ attach_vpn:
 
     # exit if already attached
     PIDFILE="/var/run/openconnect.pid"
-    if [[ -f "${PIDFILE}" ]]; then
-    echo "VPN already attached!"
+        if [[ -f "${PIDFILE}" ]]; then
+        echo "VPN already attached!"
     exit
     fi
 
