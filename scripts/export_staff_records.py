@@ -78,7 +78,7 @@ class StaffUpdater:
             pandas.DataFrame of filtered results
         """
         return (
-            pd.read_csv(ps_staff_file, dtype="str")
+            pd.read_csv(ps_staff_file, dtype="str", keep_default_na=False)
             .query("Email.notna()")
             .query("Email.str.endswith('@centercitypcs.org')")
             .set_index("Employee ID")
@@ -99,7 +99,7 @@ class StaffUpdater:
             pandas.DataFrame of filtered results
         """
         return (
-            pd.read_csv(ap_staff_file, dtype="str")
+            pd.read_csv(ap_staff_file, dtype="str", keep_default_na=False)
             .query("Status=='Active'")
             .set_index("Employee ID")
         )
