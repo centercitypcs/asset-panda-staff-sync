@@ -24,7 +24,9 @@ project-specific commands
 multi-protocol SSL VPN client
 
 Up-to-date versions of these packages are available via
-[homebrew](https://brew.sh/) on macOS and Linux.
+[homebrew](https://brew.sh/) on macOS and Linux. They are also available
+as [Nix Packages](https://search.nixos.org/packages) in case that
+installation method is preferred.
 
 ### Requirement Enviroment Variables
 
@@ -35,6 +37,7 @@ The following variables must be supplied from the execution enviroment:
 - F5_USERNAME - PowerSchool VPN username
 - F5_PASSWORD - PowerSchool VPN password
 - F5_CONNECT_URL - PowerSchool VPN connect URL
+- F5_SERVERCERT - PowerSchool VPN server certificate
 - DATA_DIR - directory path on the local host to read and write data from/to
 
 These are secrets and should be pulled on depend from secure storage. This
