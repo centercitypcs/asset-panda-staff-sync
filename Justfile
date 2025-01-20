@@ -65,7 +65,7 @@ detach_vpn:
     fi
 
     echo "Detaching VPN"
-    sudo kill -s TERM $(cat "${PIDFILE}")
+    sudo /bin/kill -s TERM $(cat "${PIDFILE}")
 
 # export staff data from PowerSchool to CSV
 @export_ps_staff: ensure_data_dir attach_vpn && detach_vpn
