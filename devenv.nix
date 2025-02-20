@@ -27,6 +27,11 @@
       };
 
     };
+
+    venv = {
+      enable = true;
+      quiet = true;
+    };
   };
 
   # https://devenv.sh/pre-commit-hooks/
@@ -40,10 +45,6 @@
     ruff.enable = true;
     ruff-format.enable = true;
   };
-
-  enterShell = ''
-    source "''${UV_PROJECT_ENVIRONMENT}/bin/activate"
-  '';
 
   # See full reference at https://devenv.sh/reference/options/
 }
