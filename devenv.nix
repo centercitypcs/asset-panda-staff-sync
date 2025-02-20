@@ -1,9 +1,5 @@
 { pkgs, lib, config, inputs, ... }:
 
-let
-  pkgs-unstable = import inputs.nixpkgs-unstable { system = pkgs.stdenv.system; };
-in
-
 {
   # disable cachix cache management to suppress errors
   cachix.enable = false;
@@ -14,7 +10,6 @@ in
 
   # https://devenv.sh/packages/
   packages = [
-    pkgs.git
     pkgs.just
     pkgs.openconnect
   ];
@@ -22,11 +17,10 @@ in
   # https://devenv.sh/languages/
   languages.python = {
     enable = true;
-    package = pkgs-unstable.python313;
+    package = pkgs.python313;
 
     uv = {
       enable = true;
-      package = pkgs-unstable.uv;
       sync = {
         enable = true;
         allExtras = true;
